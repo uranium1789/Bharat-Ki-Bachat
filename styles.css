@@ -31,6 +31,7 @@
 
 /* Additional styles as needed */
 
+
 /* styles.css */
 body {
     font-family: 'Cambria', monospace;
@@ -51,14 +52,28 @@ body {
     height: 70px; /* Slightly larger logo for better visibility */
 }
 
+/* Adjusted styles for navigation links */
 .nav-link {
     font-weight: bold; /* Make the navigation links bolder */
-    color: #bb8441; /* Blue color for the text */
+    color: #ffffff; /* White color for the text */
     transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
+/* Custom styles for the navigation bar links */
+.nav-item .nav-link {
+    font-size: xx-large; /* Increase the font size */
+    font-weight: bold; /* Make the font weight bold */
+    color: #ffffff; /* Set the font color to white */
+}
+
+/* Ensure the links remain white on hover and focus */
+.nav-item .nav-link:hover, .nav-item .nav-link:focus {
+    color: #ffffff; /* Keep the font color white */
+    text-decoration: none; /* Optional: Remove underline on hover */
+}
+
 .nav-link:hover, .nav-link:focus {
-    color: #fdfefd; /* Gold color for hover state */
+    color: #fdfefd; /* Lighter shade of white for hover state */
     text-decoration: none; /* Remove underline on hover */
 }
 
