@@ -33,8 +33,10 @@
 
 /* styles.css */
 body {
-    font-family: 'Cambria', sans-serif;
-    background-color: #f5f2f2; /* Soft background color for readability */
+    font-family: 'Cambria', monospace;
+    font-size: 4.5; /* Larger font size */
+    font-weight: bold; /* Bolder text */
+    background-color: #ebf4f4; /* Soft background color for readability */
     color: #333; /* Dark text color for contrast */
     margin: 0;
     padding-top: 0px; /* Adjusted for fixed navbar */
@@ -71,18 +73,9 @@ body {
     height: auto;
 }
 
+
 /* Styles for sections */
-.section {
-    padding: 40px 0;
-    background-color: #ffffff; /* White background for content sections */
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease-out forwards;
-    animation-delay: 0.3s;
-}
+
 
 /* Keyframes for fadeInUp animation */
 @keyframes fadeInUp {
@@ -117,7 +110,7 @@ h2 {
 /* Base styles */
 .instagram-media {
     margin: 10px auto;
-    width: 100% !important;
+    width: 90% !important;
 }
 
 .twitter-timeline {
@@ -148,5 +141,54 @@ h2 {
     }
 }
 
+/* Custom CSS for Learning Corner */
+.section-heading {
+    font-size: 2.8rem; /* Larger font size */
+    color: #17a2b8; /* Change font color */
+}
 
-/* Add more styling as needed */
+/* Custom CSS for Cyber Safety Tips and Cyber Awareness */
+.sub-heading {
+    font-size: 1.8rem; /* Larger font size for sub-headings */
+    color: #28a745; /* Change font color */
+}
+.content-text {
+    font-size: 1.3rem; /* Larger font size for content */
+}
+
+/* Colorful bullets */
+ul.colorful-bullets {
+    list-style: none; /* Remove default list style */
+    padding-left: 0; /* Remove default padding */
+}
+ul.colorful-bullets li::before {
+    content: '•'; /* Bullet character */
+    color: #dc3545; /* Bullet color */
+    display: inline-block; /* Needed to add space between bullet and text */
+    width: 1em; /* Space between bullet and text */
+    margin-left: -1em; /* Align bullet with text */
+}
+
+/* Adjust image size to be compatible with text */
+.img-responsive {
+    max-width: 100%; /* Maximum width of image is 100% of its container */
+    height: auto; /* Height is set to auto to maintain aspect ratio */
+}
+
+/* Custom CSS for Report Fraud Section */
+.report-fraud-section {
+    background-color: #ffc107; /* Highlight color */
+    font-weight: bold; /* Make text bold */
+    padding: 20px; /* Add some padding */
+    border-radius: 8px; /* Rounded corners for the highlight */
+    margin-top: 20px; /* Add some space above the section */
+    margin-bottom: 20px; /* Add some space below the section */
+}
+
+
+
+/* Custom CSS for the heading */
+.report-fraud-section h2 {
+    color: #dc3545; /* Change heading color */
+    text-shadow: 1px 1px 2px #000; /* Add shadow to make it pop */
+}
