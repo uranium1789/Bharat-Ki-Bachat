@@ -107,3 +107,79 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Data for investment overview chart
+    var investmentCtx = document.getElementById('investment-chart').getContext('2d');
+    var investmentChart = new Chart(investmentCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Stocks', 'Bonds', 'Real Estate', 'Mutual Funds'],
+            datasets: [{
+                label: 'Investment Distribution',
+                data: [50000, 30000, 20000, 10000],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    // Data for investment projection chart
+    var projectionCtx = document.getElementById('projection-chart').getContext('2d');
+    var projectionChart = new Chart(projectionCtx, {
+        type: 'line',
+        data: {
+            labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4'],
+            datasets: [{
+                label: 'Projected Growth',
+                data: [105000, 115500, 127050, 139755], // Assuming a 10% growth per year
+                backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                borderColor: 'rgba(153, 102, 255, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+});
+
+
+// JavaScript to handle the chart initialization
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize the investment overview chart
+    var investmentCtx = document.getElementById('investment-chart').getContext('2d');
+    var investmentChart = new Chart(investmentCtx, {
+        // Chart configuration...
+    });
+
+    // Initialize the investment projection chart
+    var projectionCtx = document.getElementById('projection-chart').getContext('2d');
+    var projectionChart = new Chart(projectionCtx, {
+        // Chart configuration...
+    });
+});
