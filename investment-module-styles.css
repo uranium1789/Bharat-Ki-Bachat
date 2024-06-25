@@ -1,0 +1,76 @@
+
+
+.investment-calculator-section {
+    padding: 40px 0;
+    background-color: #c7e4c7;
+    margin-top: 29px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.zerodha-varsity-section {
+    padding: 40px 0;
+    background-color: #cec476;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #343333;
+    color: #474444;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Money animation styles */
+@keyframes moneyAnimation {
+    0% { transform: translateY(0); opacity: 0; }
+    100% { transform: translateY(-20px); opacity: 1; }
+}
+
+.money-animation {
+    animation: moneyAnimation 7s ease-in-out infinite;
+}
+
+#moneyAnimationContainer img {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* This will maintain the aspect ratio */
+}
+
+#investmentResult {
+    font-weight: bold; /* Makes the text bolder */
+    background-color: rgb(200, 222, 162); /* Highlights the text */
+    display: inline-block; /* Allows background color to fit content */
+    padding: 2rem; /* Adds some space around the text */
+    border-radius: 0.25rem; /* Optional: rounds the corners of the highlight */
+    margin-top: 5rem; /* Adds space above the result */
+}
+
+/* Custom styles for the navigation bar */
+.navbar {
+    background-color: #2776b7; /* White background for clarity */
+}
+
+.navbar-brand img {
+    height: 70px; /* Slightly larger logo for better visibility */
+}
+
+.nav-link {
+    font-weight: bold; /* Make the navigation links bolder */
+    color: #bb8441; /* Blue color for the text */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #fdfefd; /* Gold color for hover state */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Add a bottom border to the active nav item */
+.nav-item.active .nav-link {
+    border-bottom: 3px solid #ffd700;
+}

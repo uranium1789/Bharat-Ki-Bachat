@@ -1,0 +1,179 @@
+/* team-styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/* Custom styles for the navigation bar */
+.navbar {
+    background-color: #ffffff; /* White background for clarity */
+}
+
+.navbar-brand img {
+    height: 70px; /* Slightly larger logo for better visibility */
+}
+
+.nav-link {
+    font-weight: bold; /* Make the navigation links bolder */
+    color: #0056b3; /* Blue color for the text */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #ffd700; /* Gold color for hover state */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Add a bottom border to the active nav item */
+.nav-item.active .nav-link {
+    border-bottom: 3px solid #ffd700;
+}
+
+
+/* Team Section Styles */
+.team-section {
+    padding: 40px 0;
+}
+
+.team-member {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.team-photo {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #007bff; /* Highlighted name */
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #555;
+}
+
+.team-member a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.team-member a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-member {
+        margin-bottom: 20px;
+    }
+}
+
+/* Team Member Grid Styles */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-4 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+/* Highlighting Team Contribution Details */
+.team-member p {
+    background-color: #f8f9fa; /* Show background for highlighting */
+    padding: px; /* Adds some padding around the text */
+    border-radius: 5px; /* Optional: rounds the corners of the highlight */
+    display: inline-block; /* Wraps the background tightly around the text */
+    font-weight: bold; /* Makes the text bold */
+    margin: 15px 0; /* Adds some space above and below the paragraph */
+}
+
+/* Team Section Background Image */
+.team-section {
+    background-image: url('teambackgroundimage.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the background covers the entire section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Optional: makes the background fixed during scroll */
+}
+
+/* Responsive adjustments for the background image on mobile devices */
+@media (max-width: 767px) {
+    .team-section {
+        background-attachment: scroll; /* Allows the background to move with the scroll on mobile devices */
+    }
+}
+
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 767px) {
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px; /* Adds space between cards on smaller screens */
+    }
+
+    .team-photo {
+        height: auto; /* Makes the height responsive */
+    }
+
+    .team-member {
+        padding: 15px; /* Reduces padding on smaller screens */
+    }
+
+    .team-section h2 {
+        text-align: center; /* Centers the section heading on smaller screens */
+        margin-bottom: 20px; /* Adds space below the heading */
+    }
+
+    /* Adjusts navbar for mobile view */
+    .navbar-nav {
+        margin-top: 20px; /* Adds space between logo and nav items */
+    }
+
+    .navbar-toggler {
+        float: right; /* Positions the toggle button to the right */
+    }
+
+    .navbar-collapse {
+        text-align: center; /* Centers the nav items when collapsed */
+    }
+}
+
+/* Additional responsive adjustments for tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+    .col-md-4 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

@@ -1,0 +1,97 @@
+
+/* Contact Box Styles */
+.contact-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Maximum width of the contact box */
+    margin: auto; /* Centers the box */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .contact-box {
+        max-width: 100%; /* Allows the box to be full width on small screens */
+        padding: 15px; /* Reduces padding on smaller screens */
+    }
+}
+
+.contact-section .container {
+    padding: 50px 20px; /* Padding for the outer container */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px; /* Space below each label */
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Full width of the contact box */
+    padding: 10px; /* Padding inside the inputs and textarea */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners for inputs and textarea */
+    margin-bottom: 15px; /* Space below each form group */
+}
+
+
+/* Donate Section Styles */
+.donate-section {
+    padding: 40px 0;
+    background: #e1d39f;
+}
+
+.donate-section .container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.donate-section h2 {
+    color: #f10d0d;
+}
+
+.donate-section .qr-code,
+.donate-section .donation-video {
+    margin-top: 0px;
+}
+
+/* styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Cambria', sans-serif;
+    background-color: #f5f2f2; /* Soft background color for readability */
+    color: #333; /* Dark text color for contrast */
+    margin: 0;
+    padding-top: 0px; /* Adjusted for fixed navbar */
+}
+
+/* Custom styles for the navigation bar */
+.navbar {
+    background-color: #2776b7; /* White background for clarity */
+}
+
+.navbar-brand img {
+    height: 70px; /* Slightly larger logo for better visibility */
+}
+
+.nav-link {
+    font-weight: bold; /* Make the navigation links bolder */
+    color: #bb8441; /* Blue color for the text */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #fdfefd; /* Gold color for hover state */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Add a bottom border to the active nav item */
+.nav-item.active .nav-link {
+    border-bottom: 3px solid #ffd700;
+}

@@ -1,0 +1,94 @@
+/* about-styles.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 40px 0;
+    background: #f9f9f9; /* Light background for the about section */
+}
+
+.about-section h2,
+.about-section h3 {
+    color: #dc0e53; /* Theme color for headings */
+    font-weight: bold;
+}
+
+.about-section p {
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.about-section .lead {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.about-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-section li {
+    margin-bottom: 10px;
+}
+
+.about-section li strong {
+    color: #333;
+}
+/* about-styles.css */
+
+/* ... existing styles ... */
+
+/* Future Aspirations Styles */
+.future-aspirations h3 {
+    color: #d7206f; /* Theme color for headings */
+    font-weight: bold;
+}
+
+.future-aspirations ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+}
+
+.future-aspirations li {
+    margin-bottom: 10px; /* Adds space between list items */
+}
+
+.future-aspirations .conclusion {
+    font-style: italic; /* Italicizes the conclusion for emphasis */
+    margin-top: 20px; /* Adds space above the conclusion */
+}
+/* ... other styles ... */
+
+
+/* Custom styles for the navigation bar */
+.navbar {
+    background-color: #2776b7; /* White background for clarity */
+}
+
+.navbar-brand img {
+    height: 70px; /* Slightly larger logo for better visibility */
+}
+
+.nav-link {
+    font-weight: bold; /* Make the navigation links bolder */
+    color: #bb8441; /* Blue color for the text */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #fdfefd; /* Gold color for hover state */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Add a bottom border to the active nav item */
+.nav-item.active .nav-link {
+    border-bottom: 3px solid #ffd700;
+}

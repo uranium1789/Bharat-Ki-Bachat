@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Module - Bharat ki Bachat</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="investment-module-styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Bharat ki Bachat Logo" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="financial-dashboard.html">Financial dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="investment-module.html">Investment Module</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+        <!-- Other navigation items -->
+    </nav>
+
+    <!-- Investment Visualization Calculator Section -->
+    <section id="investment-calculator" class="investment-calculator-section">
+        <div class="container">
+            <h2>Investment Visualization Calculator</h2>
+            <form id="investmentForm">
+                <div class="form-group">
+                    <label for="investmentAmount">Investment Amount (₹):</label>
+                    <input type="number" class="form-control" id="investmentAmount" placeholder="Enter amount">
+                </div>
+                <div class="form-group">
+                    <label for="investmentPeriod">Investment Period:</label>
+                    <input type="range" class="form-control-range" id="investmentPeriod" min="1" max="120" value="12">
+                    <span id="periodValue">1 year</span>
+                </div>
+                <div class="form-group">
+                    <label for="rateOfReturn">Rate of Return (%):</label>
+                    <input type="range" class="form-control-range" id="rateOfReturn" min="4" max="200" value="5">
+                    <span id="rateValue">1%</span>
+                </div>
+                <div class="form-group">
+                    <label for="investmentFrequency">Investment Frequency:</label>
+                    <select class="form-control" id="investmentFrequency">
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly" selected>Monthly</option>
+                        <option value="yearly">Yearly</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </form>
+            <!-- Canvas element for the interactive graph -->
+            <canvas id="investmentChart"></canvas>
+            <!-- Container for the money animation -->
+            <div id="moneyAnimationContainer" class="money-animation">
+                <img src="money_icon.png" alt="Money Animation">
+        </div>
+            <div id="investmentResult"></div>
+        </div>
+    </section>
+
+    <!-- Zerodha Varsity Section -->
+    <section id="zerodha-varsity" class="zerodha-varsity-section">
+        <div class="container">
+            <h2>Zerodha Varsity</h2>
+            <p>Explore in-depth financial lessons and stock market education with Zerodha Varsity.</p>
+            <a href="https://zerodha.com/varsity/" target="_blank" class="btn btn-success">Visit Zerodha Varsity</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-primary text-white">
+        <div class="container text-center">
+            <p>© 2024 Bharat ki Bachat. All rights reserved ✌️.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom Scripts -->
+    <script src="investment-module-scripts.js"></script>
+</body>
+</html>

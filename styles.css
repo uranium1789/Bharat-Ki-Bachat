@@ -1,0 +1,152 @@
+/* styles.css */
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background.jpg'); /* Add your background image here */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.login-card {
+    width: 150%;
+    max-width: 450px;
+}
+
+.login-logo {
+    width: 200px; /* Adjust size as needed */
+    margin-bottom: 2px;
+}
+
+.login-title {
+    font-weight: bold;
+    margin-bottom: 1px;
+}
+.login-card label {
+    font-weight: bold;
+}
+
+
+/* Additional styles as needed */
+
+/* styles.css */
+body {
+    font-family: 'Cambria', sans-serif;
+    background-color: #f5f2f2; /* Soft background color for readability */
+    color: #333; /* Dark text color for contrast */
+    margin: 0;
+    padding-top: 0px; /* Adjusted for fixed navbar */
+}
+
+/* Custom styles for the navigation bar */
+.navbar {
+    background-color: #2776b7; /* White background for clarity */
+}
+
+.navbar-brand img {
+    height: 70px; /* Slightly larger logo for better visibility */
+}
+
+.nav-link {
+    font-weight: bold; /* Make the navigation links bolder */
+    color: #bb8441; /* Blue color for the text */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #fdfefd; /* Gold color for hover state */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Add a bottom border to the active nav item */
+.nav-item.active .nav-link {
+    border-bottom: 3px solid #ffd700;
+}
+
+/* Styles for carousel images */
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+/* Styles for sections */
+.section {
+    padding: 40px 0;
+    background-color: #ffffff; /* White background for content sections */
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles for the footer */
+.footer {
+    background-color: #343a40; /* Dark background for the footer */
+    color: #f8f9fa; /* Light text color for contrast */
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: #b97e07; /* Blue color for headings */
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+
+/* Base styles */
+.instagram-media {
+    margin: 10px auto;
+    width: 100% !important;
+}
+
+.twitter-timeline {
+    border: 1px solid #7dbf88;
+    width: 100%;
+    height: 500px; /* Adjust the height as needed */
+}
+
+.card-body {
+    padding: 10px;
+    width: 100%;
+}
+
+/* Styles for screens wider than 768px */
+@media (min-width: 768px) {
+    .media-gallery-section .row > div[class*='col-'] {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .instagram-media,
+    .twitter-timeline {
+        height: 400px; /* Adjust the height for larger screens */
+    }
+
+    .card-body {
+        padding: 25px; /* Increase padding for larger screens */
+    }
+}
+
+
+/* Add more styling as needed */
