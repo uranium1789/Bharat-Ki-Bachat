@@ -169,17 +169,24 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// JavaScript to handle the chart initialization
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize the investment overview chart
-    var investmentCtx = document.getElementById('investment-chart').getContext('2d');
-    var investmentChart = new Chart(investmentCtx, {
-        // Chart configuration...
-    });
 
-    // Initialize the investment projection chart
-    var projectionCtx = document.getElementById('projection-chart').getContext('2d');
-    var projectionChart = new Chart(projectionCtx, {
-        // Chart configuration...
-    });
-});
+
+function calculateTaxLiability(grossIncome) {
+    // Tax slabs and rates for the old tax regime
+    var slabs = [250000, 500000, 1000000, grossIncome];
+    var rates = [0, 0.05, 0.2, 0.3];
+    var deductions = 150000; // Rajnish's PPF investment
+    var taxableIncome = grossIncome - deductions;
+    var taxLiability = 0;
+
+    // Calculate tax based on slabs
+    for (var i = slabs.length - 1; i > 0; i--) {
+        if (taxableIncome > slabs[i]) {
+            taxLiability += (taxableIncome - slabs[i]) * rates[i];
+            taxableIncome = slabs[i];
+        }
+    }
+
+    return taxLiability;
+}
+

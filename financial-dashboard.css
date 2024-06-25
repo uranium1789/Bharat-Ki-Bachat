@@ -8,9 +8,9 @@
 .section {
     margin-bottom: 30px;
     padding: 15px;
-    background-color: #ffffff; /* White background for sections */
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffffc4; /* White background for sections */
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Additional styles as needed */
@@ -284,6 +284,56 @@ body {
 .educational-resources li a:hover {
     color: #e24005;
 }
+
+/* Specific styles for the Taxation section */
+.taxation-section .section-title {
+    font-weight: bold;
+    font-size: 35px;
+    color: #0056b3;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.taxation-section .metrics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.taxation-section .metric-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 48%; /* Adjust width as needed */
+    margin-bottom: 20px; /* Spacing between cards */
+}
+
+.taxation-section .metric-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.taxation-section .tax-amount {
+    font-size: 24px;
+    font-weight: bold;
+    color: #28a745; /* Green color for positive financial values */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .taxation-section .metrics-container {
+        flex-direction: column;
+    }
+
+    .taxation-section .metric-card {
+        width: 100%;
+    }
+}
+
 
 
 #dashboard-overview,

@@ -112,10 +112,41 @@
     
 
     <!-- Taxation Section -->
-    <section id="taxation" class="dashboard-section">
-        <h2>Taxation</h2>
-        <!-- Content for Taxation Section -->
+    <section id="taxation-section" class="taxation-section section">
+        <div class="container">
+            <h2 class="section-title">Taxation</h2>
+            <div class="metrics-container">
+                <!-- Metric Card for Tax Calculation -->
+                <div class="metric-card tax-calculation">
+                    <h3>Tax Calculation</h3>
+                    <p>Your estimated tax liability for the year is:</p>
+                    <p class="tax-amount" id="tax-liability">₹0</p>
+                </div>
+                <!-- Metric Card for Tax Saving Strategies -->
+                <div class="metric-card tax-saving-strategies">
+                    <h3>Tax Saving Strategies</h3>
+                    <ul>
+                        <li><a href="https://cleartax.in/s/income-tax-savings" target="_blank">Tax Saving Deductions and Exemptions</a></li>
+                        <li><a href="https://www.cashoverflow.in/save-income-tax-india-salaried-business/" target="_blank">35 Easy Ways to Save Income Tax in India</a></li>
+                        <li><a href="https://www.indiafilings.com/learn/how-to-save-income-tax-best-tax-saving-methods/" target="_blank">Best Ways to Save Income Tax</a></li>
+                    </ul>
+                </div>
+                <!-- Metric Card for ITR Filing Assistance -->
+                <div class="metric-card itr-filing-assistance">
+                    <h3>ITR Filing Assistance</h3>
+                    <a href="https://www.incometax.gov.in/iec/foportal/" target="_blank">File Your ITR Now</a>
+                </div>
+                <!-- Metric Card for Tax Visualization -->
+                <div class="metric-card tax-visualization">
+                    <h3>Tax Visualization</h3>
+                    <canvas id="tax-savings-chart"></canvas>
+                </div>
+            </div>
+        </div>
     </section>
+    
+    
+
 
     <!-- Cybersecurity Education Section -->
     <section id="cybersecurity-education" class="dashboard-section">
