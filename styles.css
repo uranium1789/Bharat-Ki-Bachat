@@ -192,3 +192,33 @@ ul.colorful-bullets li::before {
     color: #dc3545; /* Change heading color */
     text-shadow: 1px 1px 2px #000; /* Add shadow to make it pop */
 }
+
+/* Responsive image styles */
+.img-responsive {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevent inline spacing */
+}
+
+/* Instagram Widget responsive styles */
+.instagram-widget {
+    width: 100%; /* Full width on smaller screens */
+    min-width: 250px; /* Minimum width to maintain layout integrity */
+    height: auto; /* Adjust height automatically */
+}
+
+@media (max-width: 768px) {
+    /* Adjustments for smaller screens (tablets and phones) */
+    .instagram-widget {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height automatically */
+    }
+}
+
+@media (max-width: 576px) {
+    /* Adjustments for extra small screens (phones) */
+    .instagram-widget {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height automatically */
+    }
+}
