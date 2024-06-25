@@ -9,7 +9,7 @@ body {
 /* About Section Styles */
 .about-section {
     padding: 40px 0;
-    background: #f9f9f9; /* Light background for the about section */
+    background: linear-gradient(to right, #f9f9f9, #e8e8f9);  /* Light background for the about section */
 }
 
 .about-section h2,
