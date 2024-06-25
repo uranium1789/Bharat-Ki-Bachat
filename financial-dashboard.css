@@ -48,3 +48,116 @@ body {
 .nav-item.active .nav-link {
     border-bottom: 3px solid #ffd700;
 }
+
+
+
+/* Custom styles for the financial dashboard */
+.dashboard-overview {
+    background-color: #f9fafc;
+    padding: 40px 0;
+}
+
+.metrics-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.metric-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 30%;
+    transition: all 0.3s ease-in-out;
+}
+
+.metric-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.metric-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+/* Add styles for personalized greeting */
+#personalized-greeting {
+    margin-bottom: 30px;
+    color: #0056b3;
+    font-weight: bold;
+}
+
+/* Add styles for tooltips */
+[data-toggle="tooltip"] {
+    position: relative;
+}
+
+[data-toggle="tooltip"]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+
+.banking-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.banking-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.income-overview, .expenses-overview {
+    width: 48%;
+}
+
+/* Additional styling as needed */
+/* Hover effect for metric cards */
+.metric-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.metric-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for the banking details container */
+@media (max-width: 768px) {
+    .banking-details {
+        flex-direction: column;
+    }
+
+    .income-overview, .expenses-overview {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+#dashboard-overview,
+#banking-section,
+#taxation,
+#finance-investment,
+#personal-finance-projections,
+#cybersecurity-education {
+    padding: 50px;
+    margin-bottom: 30px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

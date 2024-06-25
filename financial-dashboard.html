@@ -7,7 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="financial-dashboard.css">
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -42,6 +42,86 @@
             </ul>
         </div>
     </nav>
+
+    
+    <!-- Dashboard Overview Section -->
+    <section id="dashboard-overview" class="dashboard-overview">
+        <div class="container">
+            <h1 class="text-center" id="personalized-greeting"></h1>
+            <div class="metrics-container">
+                <div class="metric-card total-savings" data-toggle="tooltip" title="Your total savings including bank deposits and cash">
+                    <h3>Total Savings</h3>
+                    <p class="metric-value" id="total-savings">₹0</p>
+                </div>
+                <div class="metric-card investments" data-toggle="tooltip" title="Your current investments and their returns">
+                    <h3>Investments</h3>
+                    <p class="metric-value" id="investments">₹0</p>
+                </div>
+                <div class="metric-card upcoming-bills" data-toggle="tooltip" title="Bills due for payment in the near future">
+                    <h3>Upcoming Bills</h3>
+                    <p class="metric-value" id="upcoming-bills">₹0</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banking Section -->
+    <section id="banking-section" class="banking-section">
+        <div class="container">
+            <h2>Banking Overview</h2>
+            <div class="banking-details">
+                <div class="income-overview">
+                    <h3>Income Overview</h3>
+                    <canvas id="income-trend-chart"></canvas>
+                </div>
+                <div class="expenses-overview">
+                    <h3>Expenses Overview</h3>
+                    <canvas id="expenses-pie-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Taxation Section -->
+    <section id="taxation" class="dashboard-section">
+        <h2>Taxation</h2>
+        <!-- Content for Taxation Section -->
+    </section>
+
+    <!-- Finance and Investment Section -->
+    <section id="finance-investment" class="dashboard-section">
+        <h2>Finance and Investment</h2>
+        <!-- Content for Finance and Investment Section -->
+    </section>
+
+    <!-- Personal Finance and Investment Projections Section -->
+    <section id="personal-finance-projections" class="dashboard-section">
+        <h2>Personal Finance and Investment Projections</h2>
+        <!-- Content for Personal Finance and Investment Projections -->
+    </section>
+
+    <!-- Cybersecurity Education Section -->
+    <section id="cybersecurity-education" class="dashboard-section">
+        <h2>Cybersecurity Education</h2>
+        <!-- Content for Cybersecurity Education -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-primary text-white">
+        <div class="container text-center">
+            <p>© 2024 Bharat ki Bachat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom Scripts -->
+    <script src="financial-dashboard.js"></script>
+
 </body>
 </html>
 
