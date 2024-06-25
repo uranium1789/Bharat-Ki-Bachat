@@ -108,15 +108,17 @@ h2 {
 
 
 /* Base styles */
-.instagram-media {
+.instagram-widget {
     margin: 10px auto;
-    width: 90% !important;
+    min-width: 250px;
+    height: 300px;
+    width: 100% !important;
 }
 
 .twitter-timeline {
     border: 1px solid #7dbf88;
     width: 100%;
-    height: 500px; /* Adjust the height as needed */
+    height: 435px; /* Adjust the height as needed */
 }
 
 .card-body {
@@ -125,13 +127,16 @@ h2 {
 }
 
 /* Styles for screens wider than 768px */
-@media (min-width: 768px) {
+@media (min-width: 768px){
     .media-gallery-section .row > div[class*='col-'] {
         flex: 0 0 50%;
         max-width: 50%;
     }
 
-    .instagram-media,
+    .instagram-widget {
+        width: 100% !important;
+        height: 400px;
+    }
     .twitter-timeline {
         height: 400px; /* Adjust the height for larger screens */
     }
@@ -141,10 +146,24 @@ h2 {
     }
 }
 
+
+
+@media (max-width: 576px) {
+    /* Adjustments for extra small screens (phones) */
+    .instagram-widget {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Adjust height automatically */
+    }
+}
+
+
 /* Custom CSS for Learning Corner */
 .section-heading {
-    font-size: 2.8rem; /* Larger font size */
-    color: #17a2b8; /* Change font color */
+    font-size: 3.8rem; /* Larger font size */
+    color: #ce5329; /* Change font color */
+    text-align: center; /* Center the heading text */
+    padding-top: 30px; /* Add space above the heading */
+    padding-bottom: 30px; /* Add space below the heading */
 }
 
 /* Custom CSS for Cyber Safety Tips and Cyber Awareness */
@@ -172,7 +191,8 @@ ul.colorful-bullets li::before {
 /* Adjust image size to be compatible with text */
 .img-responsive {
     max-width: 100%; /* Maximum width of image is 100% of its container */
-    height: auto; /* Height is set to auto to maintain aspect ratio */
+    height: auto;
+    display: block; /* Height is set to auto to maintain aspect ratio */
 }
 
 /* Custom CSS for Report Fraud Section */
@@ -181,7 +201,8 @@ ul.colorful-bullets li::before {
     font-weight: bold; /* Make text bold */
     padding: 20px; /* Add some padding */
     border-radius: 8px; /* Rounded corners for the highlight */
-    margin-top: 20px; /* Add some space above the section */
+    margin : 20px auto; /* Add some space above the section */
+    max-width: 60%;
     margin-bottom: 20px; /* Add some space below the section */
 }
 
@@ -193,32 +214,11 @@ ul.colorful-bullets li::before {
     text-shadow: 1px 1px 2px #000; /* Add shadow to make it pop */
 }
 
-/* Responsive image styles */
-.img-responsive {
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Prevent inline spacing */
+
+.content-column {
+    margin-bottom: 30px; /* Adds space below the text content */
 }
 
-/* Instagram Widget responsive styles */
-.instagram-widget {
-    width: 100%; /* Full width on smaller screens */
-    min-width: 250px; /* Minimum width to maintain layout integrity */
-    height: auto; /* Adjust height automatically */
-}
-
-@media (max-width: 768px) {
-    /* Adjustments for smaller screens (tablets and phones) */
-    .instagram-widget {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Adjust height automatically */
-    }
-}
-
-@media (max-width: 576px) {
-    /* Adjustments for extra small screens (phones) */
-    .instagram-widget {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Adjust height automatically */
-    }
+.image-column {
+    margin-top: 30px; /* Adds space above the image */
 }
