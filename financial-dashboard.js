@@ -169,24 +169,68 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-function calculateTaxLiability(grossIncome) {
-    // Tax slabs and rates for the old tax regime
-    var slabs = [250000, 500000, 1000000, grossIncome];
-    var rates = [0, 0.05, 0.2, 0.3];
-    var deductions = 150000; // Rajnish's PPF investment
-    var taxableIncome = grossIncome - deductions;
-    var taxLiability = 0;
-
-    // Calculate tax based on slabs
-    for (var i = slabs.length - 1; i > 0; i--) {
-        if (taxableIncome > slabs[i]) {
-            taxLiability += (taxableIncome - slabs[i]) * rates[i];
-            taxableIncome = slabs[i];
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to calculate tax based on Indian tax slabs
+    function calculateTax(income) {
+        let tax = 0;
+        if (income <= 250000) {
+            tax = 0;
+        } else if (income <= 500000) {
+            tax += (income - 250000) * 0.05;
+        } else if (income <= 750000) {
+            tax += 12500 + (income - 500000) * 0.1;
+        } else if (income <= 1000000) {
+            tax += 37500 + (income - 750000) * 0.15;
+        } else if (income <= 1250000) {
+            tax += 75000 + (income - 1000000) * 0.2;
+        } else if (income <= 1500000) {
+            tax += 125000 + (income - 1250000) * 0.25;
+        } else {
+            tax += 187500 + (income - 1500000) * 0.3;
         }
+        return tax;
     }
 
-    return taxLiability;
-}
+    // Assuming Rajnish has made investments that save tax
+    const grossIncome = 1200000; // Annual gross income
+    const investments = 150000; // Amount invested in tax-saving schemes
+    const taxableIncome = grossIncome - investments;
+    const taxBeforeInvestment = calculateTax(grossIncome);
+    const taxAfterInvestment = calculateTax(taxableIncome);
+
+    // Update the tax liability on the dashboard
+    document.getElementById('tax-liability').textContent = `₹${taxAfterInvestment.toLocaleString()}`;
+
+    // Data for the tax visualization chart
+    const taxData = {
+        labels: ['Tax Before Investment', 'Tax After Investment'],
+        datasets: [{
+            label: 'Tax Liability',
+            data: [taxBeforeInvestment, taxAfterInvestment],
+            backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
+            borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+            borderWidth: 1
+        }]
+    };
+
+    // Configuration for the tax visualization chart
+    const taxConfig = {
+        type: 'bar',
+        data: taxData,
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    };
+
+    // Render the tax visualization chart
+    const taxCtx = document.getElementById('tax-savings-chart').getContext('2d');
+    const taxChart = new Chart(taxCtx, taxConfig);
+});
+
+
+
 

@@ -123,18 +123,24 @@
                     <p class="tax-amount" id="tax-liability">₹0</p>
                 </div>
                 <!-- Metric Card for Tax Saving Strategies -->
-                <div class="metric-card tax-saving-strategies">
+                <div class="tax-saving-strategies">
                     <h3>Tax Saving Strategies</h3>
-                    <ul>
-                        <li><a href="https://cleartax.in/s/income-tax-savings" target="_blank">Tax Saving Deductions and Exemptions</a></li>
-                        <li><a href="https://www.cashoverflow.in/save-income-tax-india-salaried-business/" target="_blank">35 Easy Ways to Save Income Tax in India</a></li>
-                        <li><a href="https://www.indiafilings.com/learn/how-to-save-income-tax-best-tax-saving-methods/" target="_blank">Best Ways to Save Income Tax</a></li>
-                    </ul>
+                    <div class="card-container">
+                        <div class="strategy-card">
+                            <a href="https://cleartax.in/s/income-tax-savings" target="_blank">Tax Saving Deductions and Exemptions</a>
+                        </div>
+                        <div class="strategy-card">
+                            <a href="https://www.cashoverflow.in/save-income-tax-india-salaried-business/" target="_blank">35 Easy Ways to Save Income Tax in India</a>
+                        </div>
+                        <div class="strategy-card">
+                            <a href="https://www.indiafilings.com/learn/how-to-save-income-tax-best-tax-saving-methods/" target="_blank">Best Ways to Save Income Tax</a>
+                        </div>
+                    </div>
                 </div>
                 <!-- Metric Card for ITR Filing Assistance -->
                 <div class="metric-card itr-filing-assistance">
                     <h3>ITR Filing Assistance</h3>
-                    <a href="https://www.incometax.gov.in/iec/foportal/" target="_blank">File Your ITR Now</a>
+                    <button onclick="window.open('https://www.incometax.gov.in/iec/foportal/', '_blank');" class="itr-file-button">File Your ITR Now</button>
                 </div>
                 <!-- Metric Card for Tax Visualization -->
                 <div class="metric-card tax-visualization">
@@ -149,9 +155,42 @@
 
 
     <!-- Cybersecurity Education Section -->
-    <section id="cybersecurity-education" class="dashboard-section">
-        <h2>Cybersecurity Education</h2>
-        <!-- Content for Cybersecurity Education -->
+    <section id="cybersecurity-education" class="cybersecurity-education section">
+        <div class="container">
+            <h2 class="section-title">Cybersecurity Education</h2>
+            <div class="metrics-container">
+                <!-- Metric Card for Common Threats -->
+                <div class="metric-card common-threats">
+                    <h3>Common Threats</h3>
+                    <p>Be aware of the latest financial scams such as UPI scams, QR code frauds, and phishing attacks that could affect you.</p>
+                </div>
+                <!-- Metric Card for Learning Resources -->
+                <div class="metric-card learning-resources">
+                    <h3>Learning Resources</h3>
+                    <div class="card-container">
+                        <div class="strategy-card">
+                            <a href="https://www.cybercrime.gov.in/" target="_blank">Cyber Crime Portal</a>
+                        </div>
+                        <div class="strategy-card">
+                            <a href="https://www.csk.gov.in/" target="_blank">Cyber Swachhta Kendra - CSK</a>
+                        </div>
+                        <div class="strategy-card">
+                            <a href="https://www.mygov.in/staysafeonline" target="_blank">Stay Safe Online | MyGov.in</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Metric Card for Scam Alerts -->
+                <div class="metric-card scam-alerts">
+                    <h3>Scam Alerts</h3>
+                    <p>Stay informed about the latest scam alerts and how to avoid them:</p>
+                    <ul>
+                        <li><a href="https://www.forbes.com/advisor/in/personal-finance/financial-scams-in-india/" target="_blank">Top Financial Scams in India</a></li>
+                        <li><a href="https://www.consumerfinance.gov/ask-cfpb/what-are-some-common-types-of-scams-en-2092/" target="_blank">Common Types of Scams</a></li>
+                        <li><a href="https://support.nerdwallet.com/hc/en-us/articles/25431424177293-Common-Financial-Scams-and-Fraudulent-Activities-To-Avoid" target="_blank">Financial Scams and Fraudulent Activities To Avoid</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
