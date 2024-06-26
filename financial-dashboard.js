@@ -108,6 +108,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const financialData = [
+        { description: 'Income', amount: null, notes: '' },
+        { description: 'Monthly Salary', amount: 100000, notes: '' },
+        { description: 'Investments', amount: null, notes: 'Monthly contributions' },
+        { description: 'PPF Investment', amount: 12500, notes: 'Annual investment of 1,50,000' },
+        { description: 'Expenses', amount: null, notes: '' },
+        { description: 'Tuition Fees', amount: 15000, notes: '' },
+        { description: 'Electricity Bill', amount: 3500, notes: '' },
+        { description: 'Car Maintenance', amount: 10000, notes: 'Including petrol' },
+        { description: 'Clothes', amount: 10000, notes: 'During festivals' },
+        { description: 'Medical Bill', amount: 5000, notes: '' },
+        { description: 'Wifi & Mobile Bill', amount: 3000, notes: '' },
+        { description: 'Household Expenses', amount: 20000, notes: 'Groceries, grains, etc.' },
+        { description: 'Monthly Trips', amount: 5000, notes: '' },
+        { description: 'Stationery & Chores', amount: 5000, notes: '' },
+        { description: 'House Maintenance', amount: 5000, notes: '' },
+        { description: 'Total Expenses', amount: 82500, notes: '' },
+        { description: 'Potential Savings', amount: 17500, notes: 'After expenses and investments' }
+    ];
+
+    const tableBody = document.getElementById('financial-summary-table').querySelector('tbody');
+    financialData.forEach(item => {
+        const row = tableBody.insertRow();
+        const cellDescription = row.insertCell(0);
+        const cellAmount = row.insertCell(1);
+        const cellNotes = row.insertCell(2);
+        cellDescription.textContent = item.description;
+        cellAmount.textContent = item.amount ? `₹${item.amount.toLocaleString()}` : '';
+        cellNotes.textContent = item.notes;
+    });
+});
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
