@@ -136,6 +136,25 @@ body {
     margin-bottom: 20px;
 }
 
+.banking-section .metrics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px; /* This will add space between the cards */
+}
+
+.banking-section .metric-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: calc(33.333% - 20px); /* Adjust width as needed, accounting for the gap */
+    margin-bottom: 20px; /* Spacing between rows of cards */
+}
+
+
 .income-overview, .expenses-overview {
     width: 48%;
 }
@@ -194,7 +213,7 @@ body {
     margin-top: 10px;
 }
 
-#financial-summary-table th,
+
 #financial-summary-table td {
     border: 1px solid #ddd;
     padding: 8px;
